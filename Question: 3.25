@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(){
+    
+    printf("A \t\t A+3 \t\t A+6 \t\t A+9 \n");
+    for(int n = 7; n <= 35; n+=7){
+        printf("%d \t\t %d \t\t %d \t\t %d\n",n, n*n, n*n*n, n*n*n*n);      
+    }
+    return 0;
+}
