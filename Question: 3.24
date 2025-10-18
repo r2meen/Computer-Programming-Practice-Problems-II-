@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void){
+    
+    int n;
+    printf("N \t\t N2 \t\t N3 \t\t N4 \n");
+    for(n = 1; n <= 10; n++){
+        printf("%d \t\t %d \t\t %d \t\t %d\n", n, n*n, n*n*n, n*n*n*n);
+    }
+    return 0;
+}
