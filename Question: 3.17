@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main(){
+    
+     int accountNumber, mortageTerm, numberOfMonths, roundedPayment;
+     float mortageAmount, interestRate, totalInterest,totalpay, requiredAmount;
+   
+    while(1){
+
+        printf(" Enter account number (-1 to end):     \n");
+        scanf("%d",&accountNumber);
+
+        if(accountNumber < -1)
+        {
+            printf("Try again, Enter a valid account number! \n");
+        }
+
+        else if(accountNumber == -1)
+        {
+           return 0;
+        }
+        
+        else
+        {
+         printf("Enter mortgage amount (in dollars):    \n");
+         scanf("%f",&mortageAmount);
+
+         printf("Enter mortgage term (in years):   \n");
+         scanf("%d",&mortageTerm);
+
+         printf("Enter interest rate (as a decimal):  \n");
+         scanf("%f",&interestRate);
+
+         totalInterest = mortageAmount * interestRate * mortageTerm;
+
+         totalpay= mortageAmount + totalInterest;
+
+         numberOfMonths = mortageTerm * 12;
+
+         requiredAmount = (totalpay / numberOfMonths);
+
+         roundedPayment = (int)(requiredAmount + 0.5);
+
+         printf("The monthly payable amount is $ %d   \n", roundedPayment);
+        } 
+    }
+}
