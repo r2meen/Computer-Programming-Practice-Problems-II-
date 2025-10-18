@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void){
+    int y = 0, z=0;
+    printf("Post-increment \n");
+    printf("%d\n",y++);
+
+    printf("Pre-increment\n");
+    printf("%d\n",++z);
+    return 0;
+}
