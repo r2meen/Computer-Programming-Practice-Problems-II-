@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) {
+    int a, b, c, largest;
+    
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if (a >= b && a >= c)
+        largest = a;
+    else if (b >= a && b >= c)
+        largest = b;
+    else
+        largest = c;
+    
+    if (largest == a && a*a == b*b + c*c)
+        printf("fits the sides of a right triangle.\n");
+    else if (largest == b && b*b == a*a + c*c)
+        printf("fits the sides of a right triangle.\n");
+    else if (largest == c && c*c == a*a + b*b)
+        printf("fits the sides of a right triangle.\n");
+    else
+        printf("not the sides of a right triangle.\n");
+    
+    return 0;
+}
