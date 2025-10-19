@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+    
+    int num, remainder, count = 0;
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    while (num != 0)
+    {
+        remainder = num % 10;
+        if (remainder == 9)
+        {
+            count++;
+        }
+        num /= 10;
+    }
+    printf("The number of 9s is: %d\n",count);
+    return 0;
+}
