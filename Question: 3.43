@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if ((a + b > c) && (a + c > b) && (b + c > a)) {
+        printf("These can represent the sides of a triangle.\n");
+    }
+    else {
+        printf("These cannot represent the sides of a triangle.\n");
+    }
+    
+    return 0;
+}
