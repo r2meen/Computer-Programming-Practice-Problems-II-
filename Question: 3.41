@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+    
+    float radius, diameter, circumference, area;
+    const float PI = 3.14159;
+
+    printf("Enter the radius: \n");
+    scanf("%f",&radius);
+
+    diameter = 2 * radius;
+    circumference = 2 * PI * radius;
+    area = PI * radius * radius;
+
+    printf("diamter = %.2f  \n", diameter);
+    printf("circumference = %.2f \n", circumference);
+    printf("area = %.2f \n", area);
+
+    return 0;
+}
