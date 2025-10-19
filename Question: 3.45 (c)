@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int terms, i, j;
+    float x, result = 1.0, fact, power;
+    
+    printf("Enter value of x: ");
+    scanf("%f", &x);
+    
+    printf("Enter number of terms: ");
+    scanf("%d", &terms);
+    
+    for (i = 1; i < terms; i++) {
+        fact = 1.0;
+        power = 1.0;
+        
+        for (j = 1; j <= i; j++) {
+            fact *= j;
+            power *= x;
+        }
+        
+        result += power / fact;
+    }
+    
+    printf("e^%.2f with %d terms = %f\n", x, terms, result);
+    
+    return 0;
+}
