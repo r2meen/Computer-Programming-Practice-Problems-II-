@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int terms, i, j;
+    float e = 1.0, fact;
+    
+    printf("Enter number of terms: ");
+    scanf("%d", &terms);
+    
+    for (i = 1; i < terms; i++) {
+        fact = 1;
+        for (j = 1; j <= i; j++) {
+            fact *= j;
+        }
+        e = e + 1.0 / fact;
+    }
+    
+    printf("e with %d terms = %f\n", terms, e);
+    
+    return 0;
+}
